@@ -20,7 +20,7 @@ after_success:
 
   # push the production images to docker hub
 
-  - docker push balanrajesh/client
-  - docker push balanrajesh/nginx
-  - docker push balanrajesh/server
-  - docker push balanrajesh/worker
+  - docker push balanrajesh/multi-client
+  - docker push balanrajesh/multi-nginx
+  - docker push balanrajesh/multi-server
+  - docker push balanrajesh/multi-worker
