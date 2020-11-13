@@ -9,10 +9,10 @@ script:
   - docker run -e CI=true rajeshbalan78/react-test npm test
 
 after_success:
-  - docker build -t rajeshbalan78/multi-client ./client
-  - docker build -t rajeshbalan78/multi-nginx ./nginx
-  - docker build -t rajeshbalan78/multi-server ./server
-  - docker build -t rajeshbalan78/multi-worker ./worker
+  - docker build -t balanrajesh/multi-client ./client
+  - docker build -t balanrajesh/multi-nginx ./nginx
+  - docker build -t balanrajesh/multi-server ./server
+  - docker build -t balanrajesh/multi-worker ./worker
 
   # Login to Docker Hub, the variables are defined in Travis CI
   
@@ -20,7 +20,7 @@ after_success:
 
   # push the production images to docker hub
 
-  - docker push rajeshbalan78/client
-  - docker push rajeshbalan78/nginx
-  - docker push rajeshbalan78/server
-  - docker push rajeshbalan78/worker
+  - docker push balanrajesh/client
+  - docker push balanrajesh/nginx
+  - docker push balanrajesh/server
+  - docker push balanrajesh/worker
