@@ -16,7 +16,8 @@ after_success:
 
   # Login to Docker Hub, the variables are defined in Travis CI
   
-  - echo "$DOCKER_PASSWORD" | docker login -u "DOCKER_ID" --password-stdin
+  # - echo "$DOCKER_PASSWORD" | docker login -u "DOCKER_ID" --password-stdin
+  -  echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
  
   # push the production images to docker hub
 
